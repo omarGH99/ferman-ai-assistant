@@ -39,6 +39,7 @@ Arabic slot extraction is unmeasured. Kurdish test sets are small (370 rows
 each), so those figures carry wide uncertainty. Sorani is the weakest language
 and the only one v2 did not improve over v1.
 
+Dataset: [`OmarSY11/ferman-nlu`](https://huggingface.co/datasets/OmarSY11/ferman-nlu) on Hugging Face.
 Models: [`OmarSY11/xlmr-intent-v2`](https://huggingface.co/OmarSY11/xlmr-intent-v2),
 [`OmarSY11/xlmr-slot-v2`](https://huggingface.co/OmarSY11/xlmr-slot-v2).
 
@@ -156,7 +157,8 @@ Code: MIT ([LICENSE](LICENSE)). Dataset (`data/XLMR_dataset_4lang_*.csv`):
 CC BY 4.0. The English and Arabic data derive from
 [MASSIVE](https://github.com/alexa/massive) (Amazon, CC BY 4.0), which must be
 credited; the Sorani and Badini rows are machine-translated additions. See
-[data/DATASET_CARD.md](data/DATASET_CARD.md).
+[data/DATASET_CARD.md](data/DATASET_CARD.md) or the
+[Hugging Face dataset page](https://huggingface.co/datasets/OmarSY11/ferman-nlu).
 
 ```bibtex
 @misc{safar2026ferman,
