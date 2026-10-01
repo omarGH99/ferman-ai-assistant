@@ -1,0 +1,69 @@
+Total rows kept: 27445
+Total rows dropped: 15096
+Kurdish rows with spelling/artifact fixes applied: 33
+Junk rows dropped ('ج.'): 2
+Sunscreen mistranslation fixed: 1
+
+=== Kept intents (row counts) ===
+alarm_query: 604
+alarm_remove: 378
+alarm_set: 792
+calendar_query: 1662
+calendar_remove: 916
+calendar_set: 2360
+cooking_query: 24
+cooking_recipe: 704
+datetime_convert: 264
+datetime_query: 1554
+email_addcontact: 214
+email_querycontact: 390
+email_sendemail: 1134
+general_greet: 106
+general_joke: 358
+general_quirky: 1734
+lists_createoradd: 558
+lists_query: 670
+lists_remove: 578
+news_query: 2188
+qa_currency: 498
+qa_definition: 832
+qa_factoid: 1614
+qa_maths: 308
+recommendation_events: 592
+recommendation_locations: 540
+recommendation_movies: 276
+takeaway_order: 600
+takeaway_query: 604
+transport_query: 698
+transport_taxi: 372
+transport_ticket: 442
+transport_traffic: 384
+weather_query: 2497
+
+=== Dropped intents (row counts) ===
+audio_volume_down: 266
+audio_volume_mute: 526
+audio_volume_other: 96
+audio_volume_up: 486
+email_query: 1284
+iot_cleaning: 468
+iot_coffee: 592
+iot_hue_lightchange: 636
+iot_hue_lightdim: 390
+iot_hue_lightoff: 702
+iot_hue_lighton: 115
+iot_hue_lightup: 385
+iot_wemo_off: 256
+iot_wemo_on: 230
+music_dislikeness: 80
+music_likeness: 560
+music_query: 712
+music_settings: 224
+play_audiobook: 522
+play_game: 412
+play_music: 2884
+play_podcasts: 652
+play_radio: 878
+qa_stock: 476
+social_post: 888
+social_query: 376

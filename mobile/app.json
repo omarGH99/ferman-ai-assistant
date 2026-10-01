@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Ferman",
+    "slug": "ferman",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "assistant",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.omarsafar.ferman"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#059669",
+        "foregroundImage": "./assets/adaptive-icon.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.omarsafar.ferman",
+      "permissions": [
+        "POST_NOTIFICATIONS",
+        "SCHEDULE_EXACT_ALARM"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#059669"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#059669",
+          "image": "./assets/adaptive-icon.png",
+          "imageWidth": 200
+        }
+      ],
+      "@react-native-community/datetimepicker"
+    ],
+    "owner": "omar_safar"
+  }
+}

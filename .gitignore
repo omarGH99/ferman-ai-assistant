@@ -1,0 +1,34 @@
+# Python
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
+
+# Local dev database (production uses Neon/Postgres via DATABASE_URL)
+*.db
+
+# Secrets / local env
+.env
+.env.local
+*.env.local
+
+# Trained model folders — these live on the Hugging Face Hub
+# (OmarSY11/xlmr-intent-v2, OmarSY11/xlmr-slot-v2), not in git.
+xlmr-intent*/
+xlmr-slot*/
+
+# Node / Expo
+node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/web-build/
+
+# Generated web export. Rebuild with:
+#   cd mobile && npx expo export -p web --output-dir ../backend/static
+static/
+
+# Superseded backups — history lives in git now
+*.bak-*
+
+# NLLB translation cache (regenerable, large)
+ml/.mt_cache.jsonl

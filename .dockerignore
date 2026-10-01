@@ -1,0 +1,20 @@
+# Keep the build context tiny — models load from the Hub, web build is in backend/static/
+.venv*
+.git
+__pycache__
+*.pyc
+mobile
+xlmr-intent
+xlmr-intent-large
+xlmr-slot
+*.db
+README.md
+docs/
+data/
+backend/test_app.py
+backend/requirements-dev.txt
+backend/app.db
+scratchpad
+
+# Training data, notebooks and eval — never needed by the container.
+ml/

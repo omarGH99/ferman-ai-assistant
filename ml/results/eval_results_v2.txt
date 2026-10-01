@@ -1,0 +1,49 @@
+# Measured 2026-08-07 against the models actually deployed
+# (OmarSY11/xlmr-intent-v2 + OmarSY11/xlmr-slot-v2), on the held-out test
+# split of data/XLMR_dataset_4lang_v2.csv. Compare with eval_results_v1.txt.
+#
+# The two header/`ar` lines below were reconciled by hand with the script's
+# current output format; every number came from the run.
+
+=== INTENT (OmarSY11/xlmr-intent-v2) ===
+overall accuracy: 0.8318
+overall macro-F1: 0.7900
+  en      n=1954 acc=0.8869 f1=0.8474
+  ar      n=1954 acc=0.8234 f1=0.7612
+  sorani  n= 370 acc=0.6973 f1=0.6465
+  badini  n= 370 acc=0.7189 f1=0.6824
+
+=== SLOT (OmarSY11/xlmr-slot-v2, entity-level seqeval) ===
+overall  P=0.7428 R=0.7964 F1=0.7687
+  en      n=1954 P=0.7899 R=0.8444 F1=0.8163
+  sorani  n= 370 P=0.6198 R=0.6685 F1=0.6432
+  badini  n= 370 P=0.5984 R=0.6489 F1=0.6226
+  ar      n=   0  no Arabic slot rows in the test split (all 304 are in train)
+
+--- v2 vs v1 -------------------------------------------------------------
+INTENT accuracy      v1      v2     change
+  en               0.8794  0.8869   +0.0075
+  ar               0.8050  0.8234   +0.0184
+  sorani           0.7006  0.6973   -0.0033   regressed
+  badini           0.6898  0.7189   +0.0291
+
+SLOT F1              v1      v2     change
+  en               0.7869  0.8163   +0.0294
+  sorani           0.6248  0.6432   +0.0184
+  badini           0.6139  0.6226   +0.0087
+
+Two things these numbers say that the headline 0.83 does not:
+
+1. Sorani is the one language v2 did not improve, and it is the weakest of the
+   four at 0.6973 — roughly one intent in three wrong. This matches the live
+   failure seen during testing (`هەولێر چیە` classified as news_query at 0.823
+   confidence: wrong, and confident enough to sail past both the confidence
+   floor and the margin check). Sorani and Badini have 370 test rows each
+   against English and Arabic's 1954, so they are both undertrained and
+   measured on a fifth of the evidence.
+
+2. Arabic slot extraction is unmeasured and effectively untrained — 304
+   annotated rows out of 11,097, none in test. Arabic intent classification is
+   fine (0.8234); it is the *slot* half that is hollow. An Arabic reminder can
+   therefore be routed to the right intent and still lose its date and time.
+   Worth an English/Arabic side-by-side check by hand before leaning on it.

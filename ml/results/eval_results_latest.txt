@@ -1,0 +1,26 @@
+=== INTENT (OmarSY11/xlmr-intent-v2) ===
+overall accuracy: 0.8318
+overall macro-F1: 0.7900
+  en      n=1954 acc=0.8869 f1=0.8474
+  ar      n=1954 acc=0.8234 f1=0.7612
+  sorani  n= 370 acc=0.6973 f1=0.6465
+  badini  n= 370 acc=0.7189 f1=0.6824
+
+most common confusions (count, true -> predicted):
+    34  general_quirky -> qa_factoid
+    22  qa_factoid -> general_quirky
+    22  calendar_set -> calendar_query
+    20  general_quirky -> news_query
+    19  general_quirky -> calendar_query
+    17  transport_ticket -> transport_query
+    15  transport_query -> transport_traffic
+    15  takeaway_query -> takeaway_order
+    15  calendar_set -> alarm_set
+    13  general_quirky -> cooking_recipe
+
+=== SLOT (OmarSY11/xlmr-slot-v2, entity-level seqeval) ===
+overall  P=0.7428 R=0.7964 F1=0.7687
+  en      n=1954 P=0.7899 R=0.8444 F1=0.8163
+  sorani  n= 370 P=0.6198 R=0.6685 F1=0.6432
+  badini  n= 370 P=0.5984 R=0.6489 F1=0.6226
+  ar      n=   0  no Arabic slot rows in the test split (all 304 are in train)

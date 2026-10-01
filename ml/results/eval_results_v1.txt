@@ -1,0 +1,16 @@
+=== INTENT (xlmr-intent) ===
+overall accuracy: 0.8157
+overall macro-F1: 0.7757
+  en      n=2944 acc=0.8794 f1=0.8448
+  ar      n=2944 acc=0.8050 f1=0.7567
+  sorani  n= 648 acc=0.7006 f1=0.6670
+  badini  n= 648 acc=0.6898 f1=0.6777
+
+=== SLOT (xlmr-slot, entity-level seqeval) ===
+overall  P=0.7139 R=0.7686 F1=0.7403
+  en      n=2944 P=0.7603 R=0.8154 F1=0.7869
+  sorani  n= 648 P=0.5990 R=0.6529 F1=0.6248
+  badini  n= 648 P=0.5900 R=0.6398 F1=0.6139
+(Superseded: these are the v1 xlmr-intent / xlmr-slot numbers. The deployed
+models are xlmr-intent-v2 / xlmr-slot-v2, which have never been evaluated.
+Run eval_models.py to produce current figures.)
